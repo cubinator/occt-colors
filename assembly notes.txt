@@ -1,0 +1,37 @@
+Assembly-CSharp-firstpass.dll (PCBS x64 v1.15.3)
+
+MemberRef (0x0A) table
+    Offset: 0x2342E8 - 0x2435B7
+    MD5: FD 42 87 42 11 28 92 F9 E2 60 DA 8A 2B 6E 37 5F
+
+    RID     Method       Color hex code
+    ---     ------       --------------
+    0x04AA  get_black    #000
+    0x0C31  get_blue     #00F
+    0x0DE0  get_green    #0F0
+    0x0BE8  get_cyan     #0FF
+    0x06F1  get_red      #F00
+    0x106C  get_magenta  #F0F
+    0x06F2  get_yellow   #FFEB04
+    0x049A  get_white    #FFF
+    0x106B  get_grey     #7F7F7F
+
+OCCTApp::.ctor method body (excluding method header)
+    Offset: 0x101434 - 0x1014AC
+
+    MD5*: 10 CC FD B9 FB 72 73 2F 2E 0C 3A E8 8B 9E B3 42
+    * words (uint16) at RID offsets zeroed out so that the hash is independent
+      of the color settings
+
+    get_[color] call instructions
+        Offset  RID offset  Default color  Purpose
+        ------  ----------  -------------  ---------------------------
+        0x0E    0x0F        blue           CPU temperature
+        0x1F    0x20        cyan           CPU throttled
+        0x30    0x31        green          GPU 1 temperature
+        0x41    0x42        grey           GPU 2 temperature / Power draw (single GPU)
+        0x52    0x53        magenta        Power draw (dual GPU)
+        0x63    0x64        white          [unused?]
+
+        RID: uint16 little endian
+        (actually uint32le, but the most significant two bytes are the same for every RID)
