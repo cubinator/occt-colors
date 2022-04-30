@@ -26,7 +26,7 @@ The script also checks for compatibility by computing MD5 hashes of the relevant
 Running the script with `-?` will show a similar usage message.
 
 ## **Backups**
-Normally, I would advice anyone modifying game files (or any files for that matter) to create a backup first. But since Steam can check game files for errors and can replace defective files with the original files (and Epic and GOG can probably do something similar), there is no need to create a backup. Unless you or some PCBS mod you installed modified `Assembly-CSharp-firstpass.dll`, in which case it might be a good idea to first create a backup in order to prevent having to reinstall mods after my script messes something up (which shouldn't happen in the first place, because it checks for compatibility. But you never know what RNGesus is up to).
+**Definitely** create a backup of your save games (`Saves` folder in the installation directory of PCBS). Steam can repair game files, but it can not repair save games. And even though my script doesn't touch your save files, PCBS has the nasty property of destroying save files if it is functional enough to load into the main menu but defective enough to not load into the game (which I found out while working on another mod, ouch).
 
 ## **Example**
 ```ps1
