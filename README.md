@@ -1,7 +1,8 @@
 PCBS OCCT Font Color Patch
 ===
 
-(tested for PCBS x64 v1.15.3 on Steam)
+## **Deprecated**
+This mod is now deprecated in favor of [OCCT Colors v2](https://www.github.com/cubinator/occt-colors-v2), which does not require the modification of games files to function.
 
 ## **Background**
 Whenever I use the OCCT app in PC Building Simulator I struggle to read the CPU's temperature due to the low contrast between the blue font and dark red background\*. After contacting the developer to ask for a fix (which for them amounts to changing one specific occurence of the word `blue` in their source code to some other color name), waiting three months and five updates and finding out that nothing has changed, I decided to patch the game myself and share the patch with other players who might enjoy a readable OCCT app as well.
@@ -74,6 +75,7 @@ Now that we have all DLL offsets of the bytes to be changed and all RIDs that we
 - [Understanding Common Intermediate Language (CIL)](https://www.codeproject.com/Articles/362076/Understanding-Common-Intermediate-Language-CIL "Understanding Common Intermediate Language (CIL) - CodeProject.com")
 
 ## **Other Notes**
+ - Tested for PCBS x64 v1.15.3 on Steam
  - I decided to use PowerShell for four main reasons:
 
    1. It is terribly unfit for binary file manipulation (using a programming language designed for that purpose just wouldn't be as much fun),
